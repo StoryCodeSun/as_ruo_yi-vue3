@@ -7,6 +7,10 @@ import 'element-plus/dist/index.css'
 import locale from 'element-plus/es/locale/lang/zh-cn'
 
 import '@/assets/styles/index.scss' // global css
+// ======
+import './assets/tailwind/index.css'
+import i18n from "./locale"
+// ======
 
 import App from './App'
 import store from './store'
@@ -68,6 +72,7 @@ app.component('Editor', Editor)
 
 app.use(router)
 app.use(store)
+app.use(i18n)
 app.use(plugins)
 app.use(elementIcons)
 app.component('svg-icon', SvgIcon)

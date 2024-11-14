@@ -7,6 +7,7 @@ export default function createAutoImport() {
             'vue-router',
             'pinia'
         ],
+        dirs: ['./src/locale', './src/api/auto-import-api', './src/stores/module', './src/hooks', './src/utils/custom'],
         dts: false
     })
 }

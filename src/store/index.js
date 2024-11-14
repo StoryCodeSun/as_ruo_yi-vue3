@@ -1,3 +1,5 @@
-const store = createPinia()
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
 
-export default store
+export default pinia
