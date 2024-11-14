@@ -132,7 +132,7 @@ watch(valueId, () => {
 @import "@/assets/styles/variables.module.scss";
 .el-scrollbar .el-scrollbar__view .el-select-dropdown__item {
   padding: 0;
-  background-color: #fff;
+  background-color: var(--color-block-background);
   height: auto;
 }
 
@@ -151,6 +151,7 @@ ul li .el-tree .el-tree-node__content {
 :deep(.is-current > div:first-child),
 :deep(.el-tree-node__content:focus) {
   background-color: mix(#fff, $--color-primary, 90%);
+  /* background-color: mix(var(--color-block-background), $--color-primary, 90%); */
   color: $--color-primary;
 }
 </style>

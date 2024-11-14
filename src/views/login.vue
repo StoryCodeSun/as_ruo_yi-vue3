@@ -179,7 +179,7 @@ getCookie();
 
 .login-form {
   border-radius: 6px;
-  background: #ffffff;
+  background: var(--color-block-background);
   width: 400px;
   padding: 25px 25px 5px 25px;
   .el-input {
@@ -215,7 +215,7 @@ getCookie();
   bottom: 0;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: var(--color-text);
   font-family: Arial;
   font-size: 12px;
   letter-spacing: 1px;

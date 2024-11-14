@@ -48,7 +48,7 @@ function back() {
   margin: 100px auto;
   .pan-back-btn {
     background: #008489;
-    color: #fff;
+    color: var(--color-text);
     border: none !important;
   }
   .pan-gif {

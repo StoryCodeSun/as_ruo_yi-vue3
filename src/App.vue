@@ -2,7 +2,7 @@
   import useSettingsStore from '@/store/modules/settings'
   import { handleThemeStyle } from '@/utils/theme'
   import { langColumns } from '@/locale'
-  import { useLocaleStore } from '@/store/modules/useLocaleStore.js';
+  import { useLocaleStore } from '@/store/modules/useLocaleStore.js'
   const { language } = storeToRefs(useLocaleStore())
   const locale = computed(() => langColumns.find((item) => item.value === language.value).locale)
 
@@ -15,7 +15,9 @@
 </script>
 
 <template>
-  <el-config-provider :locale="locale">
-    <router-view />
-  </el-config-provider>
+  <div class="bgc text-color">
+    <el-config-provider :locale="locale">
+      <router-view />
+    </el-config-provider>
+  </div>
 </template>

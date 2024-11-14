@@ -3,11 +3,11 @@
     <el-form ref="registerRef" :model="registerForm" :rules="registerRules" class="register-form">
       <h3 class="title">若依后台管理系统</h3>
       <el-form-item prop="username">
-        <el-input 
-          v-model="registerForm.username" 
-          type="text" 
-          size="large" 
-          auto-complete="off" 
+        <el-input
+          v-model="registerForm.username"
+          type="text"
+          size="large"
+          auto-complete="off"
           placeholder="账号"
         >
           <template #prefix><svg-icon icon-class="user" class="el-input__icon input-icon" /></template>
@@ -17,7 +17,7 @@
         <el-input
           v-model="registerForm.password"
           type="password"
-          size="large" 
+          size="large"
           auto-complete="off"
           placeholder="密码"
           @keyup.enter="handleRegister"
@@ -29,7 +29,7 @@
         <el-input
           v-model="registerForm.confirmPassword"
           type="password"
-          size="large" 
+          size="large"
           auto-complete="off"
           placeholder="确认密码"
           @keyup.enter="handleRegister"
@@ -39,7 +39,7 @@
       </el-form-item>
       <el-form-item prop="code" v-if="captchaEnabled">
         <el-input
-          size="large" 
+          size="large"
           v-model="registerForm.code"
           auto-complete="off"
           placeholder="验证码"
@@ -55,7 +55,7 @@
       <el-form-item style="width:100%;">
         <el-button
           :loading="loading"
-          size="large" 
+          size="large"
           type="primary"
           style="width:100%;"
           @click.prevent="handleRegister"
@@ -171,7 +171,7 @@ getCode();
 
 .register-form {
   border-radius: 6px;
-  background: #ffffff;
+  background: var(--color-block-background);
   width: 400px;
   padding: 25px 25px 5px 25px;
   .el-input {
@@ -207,7 +207,7 @@ getCode();
   bottom: 0;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: var(--color-text);
   font-family: Arial;
   font-size: 12px;
   letter-spacing: 1px;

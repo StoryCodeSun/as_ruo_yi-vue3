@@ -251,7 +251,7 @@ onMounted(() => {
 .popup-main {
     position: relative;
     margin: 10px auto;
-    background: #fff;
+    background: var(--color-block-background);
     border-radius: 5px;
     font-size: 12px;
     overflow: hidden;
@@ -279,7 +279,7 @@ onMounted(() => {
     margin-left: -70px;
     text-align: center;
     line-height: 30px;
-    background: #fff;
+    background: var(--color-block-background);
 }
 .popup-result table {
     text-align: center;

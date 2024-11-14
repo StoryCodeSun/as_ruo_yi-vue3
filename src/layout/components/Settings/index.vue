@@ -70,6 +70,13 @@
       </span>
     </div>
 
+    <div class="drawer-item">
+      <span>暗黑模式</span>
+      <span class="comp-style">
+        <el-switch v-model="isDark" class="drawer-switch" />
+      </span>
+    </div>
+
     <el-divider />
 
     <el-button type="primary" plain icon="DocumentAdd" @click="saveSetting">保存配置</el-button>
@@ -87,7 +94,9 @@ import useAppStore from '@/store/modules/app'
 import useSettingsStore from '@/store/modules/settings'
 import usePermissionStore from '@/store/modules/permission'
 import { handleThemeStyle } from '@/utils/theme'
-
+  import { useDark, useToggle } from '@vueuse/core'
+  const isDark = useDark()
+  const toggleDark = useToggle(isDark)
 const { proxy } = getCurrentInstance();
 const appStore = useAppStore()
 const settingsStore = useSettingsStore()
@@ -197,7 +206,7 @@ defineExpose({
 }
 
 .drawer-item {
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--color-text);
   padding: 12px 0;
   font-size: 14px;
 

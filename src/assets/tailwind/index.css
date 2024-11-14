@@ -15,3 +15,26 @@ object {
   display: inline;
   vertical-align: baseline;
 }
+
+:root {
+  --color-text: #323233;
+  --color-background-2: #f5f5f5;
+  --color-block-background: #fff;
+}
+
+html.dark {
+  --color-text: #f5f5f5;
+  --color-background-2: #3a3a3c;
+  --color-block-background: #1c1c1e;
+  --el-color-primary-light-9: #3a3a3c !important;
+}
+
+/* 前景色(根据dark切换) */
+.text-color {
+  color: var(--color-text);
+}
+
+/* 背景色(根据dark切换) */
+.bgc {
+  background-color: var(--color-block-background);
+}

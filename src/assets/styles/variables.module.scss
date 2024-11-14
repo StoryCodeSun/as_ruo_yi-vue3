@@ -12,10 +12,10 @@ $panGreen: #30B08F;
 $base-menu-color: #bfcbd9;
 $base-menu-color-active: #f4f4f5;
 $base-menu-background: #304156;
-$base-logo-title-color: #ffffff;
+$base-logo-title-color: #fff;
 
 $base-menu-light-color: rgba(0, 0, 0, 0.7);
-$base-menu-light-background: #ffffff;
+$base-menu-light-background: var(--color-block-background);
 $base-logo-light-title-color: #001529;
 
 $base-sub-menu-background: #1f2d3d;
@@ -26,10 +26,10 @@ $base-sub-menu-hover: #001528;
 $base-menu-color:hsla(0,0%,100%,.65);
 $base-menu-color-active:#fff;
 $base-menu-background:#001529;
-$base-logo-title-color: #ffffff;
+$base-logo-title-color: var(--color-text);
 
 $base-menu-light-color:rgba(0,0,0,.70);
-$base-menu-light-background:#ffffff;
+$base-menu-light-background:#fff;
 $base-logo-light-title-color: #001529;
 
 $base-sub-menu-background:#000c17;

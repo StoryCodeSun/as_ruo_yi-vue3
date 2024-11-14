@@ -63,7 +63,7 @@ const sideTheme = computed(() => settingsStore.sideTheme);
     & .sidebar-title {
       display: inline-block;
       margin: 0;
-      color: #fff;
+      color: var(--color-text);
       font-weight: 600;
       line-height: 50px;
       font-size: 14px;

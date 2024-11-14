@@ -117,7 +117,7 @@
 .tree-border {
     margin-top: 5px;
     border: 1px solid #e5e6e7;
-    background: #FFFFFF none;
+    background: #fff none;
     border-radius:4px;
     width: 100%;
 }
@@ -202,20 +202,20 @@
 .el-button--cyan:active {
   background: #20B2AA;
   border-color: #20B2AA;
-  color: #FFFFFF;
+  color: var(--color-text);
 }
 
 .el-button--cyan:focus,
 .el-button--cyan:hover {
   background: #48D1CC;
   border-color: #48D1CC;
-  color: #FFFFFF;
+  color: var(--color-text);
 }
 
 .el-button--cyan {
   background-color: #20B2AA;
   border-color: #20B2AA;
-  color: #FFFFFF;
+  color: var(--color-text);
 }
 
 /* text color */
