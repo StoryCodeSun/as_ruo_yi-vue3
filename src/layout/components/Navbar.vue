@@ -9,11 +9,11 @@
         <header-search id="header-search" class="right-menu-item" />
         <screenfull id="screenfull" class="right-menu-item hover-effect" />
 
-        <el-tooltip content="布局大小" effect="dark" placement="bottom">
+        <el-tooltip content="布局大小"  placement="bottom">
           <size-select id="size-select" class="right-menu-item hover-effect" />
         </el-tooltip>
 
-        <el-tooltip content="语言切换" effect="dark" placement="bottom">
+        <el-tooltip content="语言切换"  placement="bottom">
           <el-dropdown ref="dropdownLanguageRef" @command="cutLocales" trigger="click" placement="bottom">
             <i class="s-icon text-[24px] leading-loose text-[#5a5e66] cursor-pointer">&#xe7eb;</i>
             <template #dropdown>
