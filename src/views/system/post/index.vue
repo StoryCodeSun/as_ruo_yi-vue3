@@ -19,7 +19,7 @@
                @keyup.enter="handleQuery"
             />
          </el-form-item>
-         <el-form-item label="状态" prop="status">
+         <el-form-item :label="$t('status')" prop="status">
             <el-select v-model="queryParams.status" placeholder="岗位状态" clearable style="width: 200px">
                <el-option
                   v-for="dict in sys_normal_disable"
@@ -30,8 +30,8 @@
             </el-select>
          </el-form-item>
          <el-form-item>
-            <el-button type="primary" icon="Search" @click="handleQuery">搜索</el-button>
-            <el-button icon="Refresh" @click="resetQuery">重置</el-button>
+            <el-button type="primary" icon="Search" @click="handleQuery">{{ $t('search') }}</el-button>
+            <el-button icon="Refresh" @click="resetQuery">{{ $t('reset') }}</el-button>
          </el-form-item>
       </el-form>
 
@@ -43,7 +43,7 @@
                icon="Plus"
                @click="handleAdd"
                v-hasPermi="['system:post:add']"
-            >新增</el-button>
+            >{{ $t('add') }}</el-button>
          </el-col>
          <el-col :span="1.5">
             <el-button
@@ -53,7 +53,7 @@
                :disabled="single"
                @click="handleUpdate"
                v-hasPermi="['system:post:edit']"
-            >修改</el-button>
+            >{{ $t('edit') }}</el-button>
          </el-col>
          <el-col :span="1.5">
             <el-button
@@ -63,7 +63,7 @@
                :disabled="multiple"
                @click="handleDelete"
                v-hasPermi="['system:post:remove']"
-            >删除</el-button>
+            >{{ $t('delete') }}</el-button>
          </el-col>
          <el-col :span="1.5">
             <el-button
@@ -72,7 +72,7 @@
                icon="Download"
                @click="handleExport"
                v-hasPermi="['system:post:export']"
-            >导出</el-button>
+            >{{ $t('export') }}</el-button>
          </el-col>
          <right-toolbar v-model:showSearch="showSearch" @queryTable="getList"></right-toolbar>
       </el-row>
@@ -83,7 +83,7 @@
          <el-table-column label="岗位编码" align="center" prop="postCode" />
          <el-table-column label="岗位名称" align="center" prop="postName" />
          <el-table-column label="岗位排序" align="center" prop="postSort" />
-         <el-table-column label="状态" align="center" prop="status">
+         <el-table-column :label="$t('status')" align="center" prop="status">
             <template #default="scope">
                <dict-tag :options="sys_normal_disable" :value="scope.row.status" />
             </template>
@@ -95,8 +95,8 @@
          </el-table-column>
          <el-table-column label="操作" width="180" align="center" class-name="small-padding fixed-width">
             <template #default="scope">
-               <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:post:edit']">修改</el-button>
-               <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:post:remove']">删除</el-button>
+               <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:post:edit']">{{ $t('edit') }}</el-button>
+               <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:post:remove']">{{ $t('delete') }}</el-button>
             </template>
          </el-table-column>
       </el-table>
@@ -136,8 +136,8 @@
          </el-form>
          <template #footer>
             <div class="dialog-footer">
-               <el-button type="primary" @click="submitForm">确 定</el-button>
-               <el-button @click="cancel">取 消</el-button>
+               <el-button type="primary" @click="submitForm">{{ $t('confirm') }}</el-button>
+               <el-button @click="cancel">{{ $t('cancel') }}</el-button>
             </div>
          </template>
       </el-dialog>

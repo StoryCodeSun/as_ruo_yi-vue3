@@ -47,7 +47,7 @@
                      @keyup.enter="handleQuery"
                   />
                </el-form-item>
-               <el-form-item label="状态" prop="status">
+               <el-form-item :label="$t('status')" prop="status">
                   <el-select
                      v-model="queryParams.status"
                      placeholder="用户状态"
@@ -73,8 +73,8 @@
                   ></el-date-picker>
                </el-form-item>
                <el-form-item>
-                  <el-button type="primary" icon="Search" @click="handleQuery">搜索</el-button>
-                  <el-button icon="Refresh" @click="resetQuery">重置</el-button>
+                  <el-button type="primary" icon="Search" @click="handleQuery">{{ $t('search') }}</el-button>
+                  <el-button icon="Refresh" @click="resetQuery">{{ $t('reset') }}</el-button>
                </el-form-item>
             </el-form>
 
@@ -86,7 +86,7 @@
                      icon="Plus"
                      @click="handleAdd"
                      v-hasPermi="['system:user:add']"
-                  >新增</el-button>
+                  >{{ $t('add') }}</el-button>
                </el-col>
                <el-col :span="1.5">
                   <el-button
@@ -96,7 +96,7 @@
                      :disabled="single"
                      @click="handleUpdate"
                      v-hasPermi="['system:user:edit']"
-                  >修改</el-button>
+                  >{{ $t('edit') }}</el-button>
                </el-col>
                <el-col :span="1.5">
                   <el-button
@@ -106,7 +106,7 @@
                      :disabled="multiple"
                      @click="handleDelete"
                      v-hasPermi="['system:user:remove']"
-                  >删除</el-button>
+                  >{{ $t('delete') }}</el-button>
                </el-col>
                <el-col :span="1.5">
                   <el-button
@@ -115,7 +115,7 @@
                      icon="Upload"
                      @click="handleImport"
                      v-hasPermi="['system:user:import']"
-                  >导入</el-button>
+                  >{{ $t('import') }}</el-button>
                </el-col>
                <el-col :span="1.5">
                   <el-button
@@ -124,7 +124,7 @@
                      icon="Download"
                      @click="handleExport"
                      v-hasPermi="['system:user:export']"
-                  >导出</el-button>
+                  >{{ $t('export') }}</el-button>
                </el-col>
                <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" :columns="columns"></right-toolbar>
             </el-row>
@@ -136,7 +136,7 @@
                <el-table-column label="用户昵称" align="center" key="nickName" prop="nickName" v-if="columns[2].visible" :show-overflow-tooltip="true" />
                <el-table-column label="部门" align="center" key="deptName" prop="dept.deptName" v-if="columns[3].visible" :show-overflow-tooltip="true" />
                <el-table-column label="手机号码" align="center" key="phonenumber" prop="phonenumber" v-if="columns[4].visible" width="120" />
-               <el-table-column label="状态" align="center" key="status" v-if="columns[5].visible">
+               <el-table-column :label="$t('status')" align="center" key="status" v-if="columns[5].visible">
                   <template #default="scope">
                      <el-switch
                         v-model="scope.row.status"
@@ -238,7 +238,7 @@
                   </el-form-item>
                </el-col>
                <el-col :span="12">
-                  <el-form-item label="状态">
+                  <el-form-item :label="$t('status')">
                      <el-radio-group v-model="form.status">
                         <el-radio
                            v-for="dict in sys_normal_disable"
@@ -287,8 +287,8 @@
          </el-form>
          <template #footer>
             <div class="dialog-footer">
-               <el-button type="primary" @click="submitForm">确 定</el-button>
-               <el-button @click="cancel">取 消</el-button>
+               <el-button type="primary" @click="submitForm">{{ $t('confirm') }}</el-button>
+               <el-button @click="cancel">{{ $t('cancel') }}</el-button>
             </div>
          </template>
       </el-dialog>
@@ -321,8 +321,8 @@
          </el-upload>
          <template #footer>
             <div class="dialog-footer">
-               <el-button type="primary" @click="submitFileForm">确 定</el-button>
-               <el-button @click="upload.open = false">取 消</el-button>
+               <el-button type="primary" @click="submitFileForm">{{ $t('confirm') }}</el-button>
+               <el-button @click="upload.open = false">{{ $t('cancel') }}</el-button>
             </div>
          </template>
       </el-dialog>

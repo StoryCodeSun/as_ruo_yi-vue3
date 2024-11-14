@@ -1,3 +1,17 @@
 {
-  "sm_test": "测试"
+  "add": "新增",
+  "back": "返回",
+  "cancel": "取 消",
+  "confirm": "确 定",
+  "delete": "删除",
+  "edit": "修改",
+  "export": "导出",
+  "goHome": "去首页",
+  "handle": "操作",
+  "import": "导入",
+  "remark": "备注",
+  "reset": "重置",
+  "search": "搜索",
+  "sm_test": "测试",
+  "status": "状态"
 }

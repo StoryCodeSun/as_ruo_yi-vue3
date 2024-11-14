@@ -1,7 +1,9 @@
-<script setup name="Index"></script>
+<script setup name="Index">
+  const title = import.meta.env.VITE_APP_TITLE
+</script>
 <template>
   <div class="home">
-    <p class="text-4xl text-center mt-4">{{ $t('sm_test') }}</p>
+    <p class="text-4xl text-center mt-20">{{ title }}</p>
   </div>
 </template>
 

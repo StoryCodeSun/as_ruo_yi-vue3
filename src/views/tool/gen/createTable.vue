@@ -5,8 +5,8 @@
     <el-input type="textarea" :rows="10" placeholder="请输入文本" v-model="content"></el-input>
     <template #footer>
       <div class="dialog-footer">
-        <el-button type="primary" @click="handleImportTable">确 定</el-button>
-        <el-button @click="visible = false">取 消</el-button>
+        <el-button type="primary" @click="handleImportTable">{{ $t('confirm') }}</el-button>
+        <el-button @click="visible = false">{{ $t('cancel') }}</el-button>
       </div>
     </template>
   </el-dialog>

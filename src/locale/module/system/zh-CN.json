@@ -1,4 +1,10 @@
 {
   "Chinese": "中文",
-  "English": "英语"
+  "English": "英语",
+  "noPermission": "401错误!",
+  "noPermissionInfo": "对不起，您正在寻找的页面不存在。尝试检查URL的错误，然后按浏览器上的刷新按钮或尝试在我们的应用程序中找到其他内容。",
+  "noPermissionMessage": "找不到网页！",
+  "noPermissionText": "对不起，您没有访问权限，请不要进行非法操作！您可以返回主页面",
+  "noPermissionTip": "您没有访问权限！",
+  "refreshCache": "刷新缓存"
 }
