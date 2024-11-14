@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-img,svg {
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
   display: inline;
   vertical-align: baseline;
 }
