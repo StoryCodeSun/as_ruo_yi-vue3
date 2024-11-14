@@ -294,7 +294,7 @@ function handleScroll() {
         border-color: #42b983;
         &::before {
           content: "";
-          background: var(--color-block-background);
+          background: #fff;
           display: inline-block;
           width: 8px;
           height: 8px;
