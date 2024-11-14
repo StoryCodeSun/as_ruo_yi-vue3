@@ -1,17 +1,12 @@
-@import url('../icons/iconfont.css');
+@import url("../icons/iconfont.css");
+/* @import url("./preflight.css"); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
+svg {
   display: inline;
   vertical-align: baseline;
 }
