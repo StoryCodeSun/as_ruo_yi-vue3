@@ -9,21 +9,20 @@
         <header-search id="header-search" class="right-menu-item" />
         <screenfull id="screenfull" class="right-menu-item hover-effect" />
 
-        <el-tooltip content="布局大小"  placement="bottom">
+        <el-tooltip content="布局大小" placement="bottom">
           <size-select id="size-select" class="right-menu-item hover-effect" />
         </el-tooltip>
-
-        <el-tooltip content="语言切换"  placement="bottom">
-          <el-dropdown ref="dropdownLanguageRef" @command="cutLocales" trigger="click" placement="bottom">
-            <i class="s-icon text-[24px] leading-loose text-[#5a5e66] cursor-pointer">&#xe7eb;</i>
-            <template #dropdown>
-              <el-dropdown-menu>
-                <el-dropdown-item v-for="(item, index) in langColumns" :key="item.value" :command="item.value">{{ $t(item.text) }}</el-dropdown-item>
-              </el-dropdown-menu>
-            </template>
-          </el-dropdown>
-        </el-tooltip>
       </template>
+      <el-tooltip content="语言切换" placement="bottom">
+        <el-dropdown ref="dropdownLanguageRef" @command="cutLocales" trigger="click" placement="bottom">
+          <i class="s-icon text-[24px] leading-loose text-[#5a5e66] cursor-pointer">&#xe7eb;</i>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item v-for="(item, index) in langColumns" :key="item.value" :command="item.value">{{ $t(item.text) }}</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
+      </el-tooltip>
       <div class="avatar-container">
         <el-dropdown @command="handleCommand" class="right-menu-item hover-effect" trigger="click">
           <div class="avatar-wrapper">
@@ -70,6 +69,14 @@
 
   function toggleSideBar() {
     appStore.toggleSideBar()
+    const w = getSto('dragLineWidth') || 200
+    if (!appStore.sidebar.opened) {
+      document.querySelector('#sidebar-box')?.style.setProperty('width', '54px', 'important')
+      document.querySelector('#main-container-box').style.marginLeft = '54px'
+    } else {
+      document.querySelector('#sidebar-box')?.style.setProperty('width', `${w}px`, 'important')
+      document.querySelector('#main-container-box').style.marginLeft = `${w}px`
+    }
   }
 
   function handleCommand(command) {
